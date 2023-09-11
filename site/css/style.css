@@ -207,6 +207,12 @@ button:active .bi-person-fill{
 .nav-item:hover span.nav-link-2 div{
 	transform: scale(1.1);
 }
+.nav-item span.nav-link-1{
+	transform: scale(1.1);
+}
+.nav-item:hover span.nav-link-1 img{
+	transform: scale(1.08);
+}
 .menuInfoItems1.nav-item:hover span{
 	background-color: lightgrey;
 	border-radius: 5px;
