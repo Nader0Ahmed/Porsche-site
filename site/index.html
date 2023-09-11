@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon-precomposed shorcut icon" type="image/png" href="images/porsche-logo.png">
+	<title>Porsche Middle East - Egypt</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav id="header-nav" class="navbar bg-body-tertiary">
+			<div class="container"> 
+				<div class="navbar-brand">
+					<a href="index.html" class="">
+						<div id="logo-img" alt="Logo image"></div>
+					</a>
+				</div>
+				<ul id="nav-list" class="nav float-end">
+					<li>
+						<button onclick="reset_menu()" class="bi navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-person" viewBox="0 0 16 16">
+								<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+							</svg>	
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-person-fill" viewBox="0 0 16 16">
+	  							<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+							</svg>	
+						</button>				
+					</li>
+					<hr class="vertical-hr">
+					<li>
+					    <button onclick="reset_menu()" class="bi navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					      <span class="navbar-toggler-icon"></span>
+					      <span class="d-none d-sm-inline"> menu</span>
+					    </button>						
+					</li>
+				</ul>
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="row scroll">
+						<div class="col-md-7 col-lg-7 col-sm-12" id="main-menu"> 
+					    	<div class="offcanvas-header">
+					    		<h1 class="offcanvas-title" id="offcanvasNavbarLabel"></h1>
+					    		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					    	</div>
+					    	<div class="offcanvas-body">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					        		<li class="nav-item"  id="menuItems">
+					        			<button onclick="show_models(this)" class="nav-link" aria-current="page" href="#">
+					        				Models
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_vehicle_purchase(this)" class="nav-link" href="#">
+					        				Vehicle Purchase
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_services(this)" class="nav-link" href="#">
+					        				Services
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_experience(this)" class="nav-link" href="#">
+					        				Experience
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_find_a_dealer(this)" class="nav-link" href="#">
+					        				Find a Dealer
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					    		</ul>
+					    	</div>						
+						</div>
+						<div class="col-md-5 col-lg-5 col-sm-12 white" id="main-menu">
+					    	<div class="offcanvas-body" id="offcanvas-body-1">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_718(document.querySelectorAll('.show-car')[0])" class="nav-link-1"><img src="images/718.webp"></span> 
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_911(document.querySelectorAll('.show-car')[1])" class="nav-link-1"><img src="images/911.webp"></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_taycan(document.querySelectorAll('.show-car')[2])" class="nav-link-1"><img src="images/taycan.webp"></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_panamera(document.querySelectorAll('.show-car')[3])" class="nav-link-1"><img src="images/panamera.webp"></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_macan(document.querySelectorAll('.show-car')[4])" class="nav-link-1"><img src="images/macan.webp"></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="back_from_menu(); show_cayenne(document.querySelectorAll('.show-car')[5])" class="nav-link-1"><img src="images/cayenne.webp"></span>
+					        		</li>					        		
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="offcanvas-body-2">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" aria-current="page" href="https://www.porsche.com/middle-east/_egypt_/modelstart/"><span>Configure</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/models/?compare"><span>Compare Models</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://finder.porsche.com/eg/en-EG?int_ref=globalnav&int_medium=link&int_id=inventory"><span>Find New and Pre-owened vehicles</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://finder.porsche.com/eg/en-EG/favorites"><span>Find Connect Services</span></a>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/e-performance/"><span>E-Mobility & E-Performance</span></a>
+					        		</li>
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="offcanvas-body-3">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" aria-current="page" href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/factorycollection/"><span>Factory Delivery</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/accessoriesandservice/porscheservice/"><span>Services & Maintenance</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/tequipment/"><span>Tequipment - Genuine Accessories</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/accessoriesandservice/exclusive-manufaktur/"><span>Exclusive Manufaktur - Individual Vehicles</span></a>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/accessoriesandservice/classic/"><span>Classic - Service & Parts</span></a>
+					        		</li>
+									<li class="nav-item menuInfoItems1" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/approvedused/porscheapproved/"><span>Approved - Pre-owned Cars & Warranty</span></a>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/porschelifestyle/"><span>Lifestyle - Fashion & Accessories</span></a>
+					        		</li>
+				        		</ul>
+					    	</div>
+ 					    	<div class="offcanvas-body" id="offcanvas-body-4">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" aria-current="page" href="https://www.porsche.com/middle-east/_egypt_/motorsportandevents/motorsport/"><span>Motorsport</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/motorsportandevents/experience/"><span>Porsche Experience - Driving & Track Experiences</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/middle-east/_egypt_/motorsportandevents/porscheclubs/"><span>Porsche Clubs</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/motorsportandevents/golf/"><span>Golf</span></a>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/stories"><span>Stories - People.Passion.Places.</span></a>
+					        		</li>					        		
+									<li class="nav-item" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/aboutporsche/christophorusmagazine/"><span>Christophorus - The Porsche Magazine</span></a>
+					        		</li>
+									<li class="nav-item menuInfoItems1" id="menuInfoItems">
+					        			<a class="nav-link" href="https://www.porsche.com/international/aboutporsche/porschemuseum/"><span>Porsche Museum</span></a>
+					        		</li>
+				        		</ul>
+					    	</div>
+					    	<div id="offcanvas-body-5">
+					    		<div class="offcanvas-body">
+					    			<button type="button" class="btn-close" id="small-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					    			<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					    				<li class="nav-item" id="dealer">
+											<form class="d-flex" role="search">
+										     	<input class="form-control" type="search" placeholder="Zip code or town" aria-label="Search">
+										      	<button class="btn btn-outline-success" type="submit">
+										      		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+														<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+													</svg>
+										      	</button>
+											</form>						    					
+					    				</li>
+					    				<li class="nav-item" id="dealer">
+					    					<label class="small-or">or</label>
+					    					<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/dealersearch/', '_blank')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Use current location</button>		    					
+					    				</li>	
+									</ul>		    			
+					    		</div>
+					    	</div>
+						</div>
+						<div class="col-md-7 col-lg-7 col-sm-12" id="cars-menu"> <!--the cars list-->
+					    	<div class="offcanvas-header">
+					    		<h1 class="offcanvas-title" id="offcanvasNavbarLabel"></h1>
+					    		<div style="width: 100%;"><button type="button" class="models-btn-close" onclick="back_to_menu()">Models</button></div>
+					    	</div>
+					    	<div class="offcanvas-body">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					        		<li class="nav-item"  id="menuItems">
+					        			<button onclick="show_718(this)" class="nav-link show-car" aria-current="page" href="#">
+					        				<img src="images/718-num.jpg" draggable="false" class="menu-img">
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_911(this)" class="nav-link show-car" href="#">
+					        				<img src="images/911-num.jpg" draggable="false" class="menu-img">
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_taycan(this)" class="nav-link show-car" href="#">
+					        				<img src="images/taycan-logo.jpg" draggable="false" class="menu-img">
+					        				<pre>Electric</pre>
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_panamera(this)" class="nav-link show-car" href="#">
+					        				<img src="images/panamera-logo.png" draggable="false" class="menu-img">
+					        				<pre>Gasoline | Hybrid</pre>
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_macan(this)" class="nav-link show-car" href="#">
+					        				<img src="images/macan-logo.png" draggable="false" class="menu-img">
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>
+					        		<li class="nav-item" id="menuItems">
+					        			<button onclick="show_cayenne(this)" class="nav-link show-car" href="#">
+					        				<img src="images/cayenne-logo.jpg" draggable="false" class="menu-img">
+					        				<pre>Gasoline | Hybrid</pre>
+					        				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+											  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+					        			</button>
+					        		</li>					        		
+					    		</ul>
+					    	</div>						
+						</div>
+						<div class="col-md-5 col-lg-5 col-sm-12 white" id="cars-menu">
+					    	<div class="offcanvas-body" id="cars-offcanvas-body-1">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=718', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/911?model=911&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-models/718-cayman/');" class="nav-link-2"><div><img src="images/718-cayman.webp"><br> 718 Cayman Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-models/718-boxster/');" class="nav-link-2"><div><img src="images/718-boxster.webp"><br> 718 Boxster Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-cayman-gt4/');" class="nav-link-2"><div><img src="images/718-cayman-gt4.webp"><br> 718 Cayman GT4<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-cayman-gt4-rs/');" class="nav-link-2"><div><img src="images/718-cayman-gt4-rs.webp"><br> 718 Cayman GT4 RS<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-spyder/');" class="nav-link-2"><div><img src="images/718-spyder.webp"><br> 718 Spyder<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/718-spyder-rs/');" class="nav-link-2"><div><img src="images/718-spyder-rs.webp"><br> 718 Spyder RS<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/')" class="form-control" type="submit">718 Models</button>		    					
+					        		</li>					        		
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="cars-offcanvas-body-2">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=911', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/911?model=911&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-models/carrera/');" class="nav-link-2"><div><img src="images/911-carrera.webp"><br> 911 Carrera Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-models/carrera-cabriolet/');" class="nav-link-2"><div><img src="images/911-carrera-cabriolet.webp"><br> 911 Carrera Cabriolet Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-models/targa-4/');" class="nav-link-2"><div><img src="images/911-targa.webp"><br> 911 Targa Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-turbo-models/911-turbo/');" class="nav-link-2"><div><img src="images/911-turbo.webp"><br> 911 Turbo Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-turbo-models/911-turbo-cabriolet/');" class="nav-link-2"><div><img src="images/911-turbo-cabriolet.webp"><br> 911 Turbo Cabriolet Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-dakar/');" class="nav-link-2"><div><img src="images/911-dakar.webp"><br> 911 Dakar<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-gt3-models/911-gt3/');" class="nav-link-2"><div><img src="images/911-gt3.webp"><br> 911 GT3 Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-gt3-rs/');" class="nav-link-2"><div><img src="images/911-gt3-rs.webp"><br> 911 GT3 RS<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/911-st/');" class="nav-link-2"><div><img src="images/911-st.webp"><br> 911 S/T<div></span>
+					        		</li>				        		
+									<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/')" class="form-control" type="submit">911 Models</button>		    					
+					        		</li>
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="cars-offcanvas-body-3">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=taycan', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/taycan/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/taycan?model=taycan&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/taycan/taycan-models/taycan/');" class="nav-link-2"><div><img src="images/taycan-menu-model.webp"><br> Taycan Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/taycan/taycan-models/taycan-4-cross-turismo/');" class="nav-link-2"><div><img src="images/taycan-cross-turismo.webp"><br> Cross Turismo Models<div></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/taycan/')" class="form-control" type="submit">Taycan Models</button>		    					
+					        		</li>
+				        		</ul>
+					    	</div>
+ 					    	<div class="offcanvas-body" id="cars-offcanvas-body-4">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=panamera', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/panamera/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/panamera?model=panamera&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/panamera/panamera-models/panamera/');" class="nav-link-2"><div><img src="images/panamera-menu-models.webp"><br> Panamera Models<div></span>
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/panamera/panamera-models/panamera-4-executive/');" class="nav-link-2"><div><img src="images/panamera-executive.webp"><br> Executive Models<div></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/panamera/')" class="form-control" type="submit">Panamera Models</button>		    					
+					        		</li>
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="cars-offcanvas-body-5">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=macan', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/macan/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/macan?model=macan&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/macan/macan-models/macan/');" class="nav-link-2"><div><img src="images/macan-menu-model.webp"><br> Macan Models<div></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/macan/')" class="form-control" type="submit">Macan Models</button>		    					
+					        		</li>
+				        		</ul>
+					    	</div>
+					    	<div class="offcanvas-body" id="cars-offcanvas-body-6">
+					    		<ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menuInfo">
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=cayenne', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="https://cdn.ui.porsche.com/porsche-design-system/icons/locate.min.c28bdf292bbf297eb8109a272e2ffb91.svg" alt="location image" class="loc-img"></phn-p-icon>Configure</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/cayenne/?compare', '_self')" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/compare-icon.png" alt="location image" class="loc-img-1"></phn-p-icon>Compare</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://finder.porsche.com/eg/en-EG/search/cayenne?model=cayenne&int_ref=globalnav&int_medium=link&int_id=inventory', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated flip" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></phn-p-icon>Find New and Pre-owned vehicles</button>		    					
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://contact.porsche.com/middle-east/_egypt_/testdrive/', '_self');" class="form-control" type="submit"><phn-p-icon class="icon hydrated" aria-hidden="true"><img src="images/160115.svg" alt="location image" class="loc-img-1"></phn-p-icon>Request a Test Drive</button>		    					
+					        		</li>
+									<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/cayenne/cayenne-models/');" class="nav-link-2"><div><img src="images/cayenne-menu-models.webp"><br> Cayenne Models<div></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/cayenne/cayenne-coupe-models/');" class="nav-link-2"><div><img src="images/cayenne-coupe.webp"><br> Cayenne Coupe Models<div></span>
+					        		</li>
+					        		<li class="nav-item" id="menuInfoItems">
+					        			<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/cayenne/')" class="form-control" type="submit">Cayenne Models</button>		    					
+					        		</li>
+				        		</ul>
+					    	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div id="main-content" class="container-fluid">
+		<div class="row">
+			<div>
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/" class="row not-100" id="news-1">
+					<img src="images/jumbotron-1.png" alt="Jumbotron" class="jumbotron">
+					<div class="jumbotron-items black-font">
+						<h1>
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+						  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+						Porsche Center Egypt.</h1>
+						<p>Welcome.</p>
+					</div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/" class="row not-100" id="news-2">
+					<img src="images/jumbotron-2.png" alt="Jumbotron" class="jumbotron">
+					<div class="jumbotron-items">
+						<h1>
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+						  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+						Sportmade.</h1>
+						<p>The new 718 spyder RS.</p>
+					</div>
+				</a>			
+				<a href="https://www.porsche.com/middle-east/_egypt_/models/taycan/taycan-models/taycan-gts/" class="row not-100" id="news-3">
+					<img src="images/jumbotron-3.png" alt="Jumbotron" class="jumbotron">
+					<div class="jumbotron-items">
+						<h1>
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+						  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+						Taycan.</h1>
+						<p>The Porsche among electric cars.</p>
+					</div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/" class="row not-100" id="news-4">
+					<img src="images/jumbotron-4.jpg" alt="Jumbotron" class="jumbotron">
+					<div class="jumbotron-items">
+						<h1>
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+						  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+						Further together.</h1>
+						<p>The new Cayenne Turbo E-Hydrid.</p>
+					</div>
+				</a>			
+				<a href="https://www.porsche.com/middle-east/_egypt_/models/taycan/taycan-models/taycan-gts/" class="row not-100" id="news-5">
+					<img src="images/jumbotron-5.png" alt="Jumbotron" class="jumbotron">
+					<div class="jumbotron-items">
+						<h1>
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+						  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+						More of what you love.</h1>
+						<p>The 911 GTS models.</p>
+					</div>
+				</a>				
+			</div>
+			<button onclick="menu_move_right()" class="btn r" type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" class="bi bi-chevron-right" viewBox="0 0 16 16">
+				  	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>
+	      	</button>
+			<button onclick="menu_move_left()" class="btn l" type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+				</svg>
+	      	</button>
+			<div class="switch-jumbotron">
+				<span class="dot selected-dot" onclick="go_to_new(0, this)"></span>
+				<span class="dot" onclick="go_to_new(1, this)"></span>
+				<span class="dot" onclick="go_to_new(2, this)"></span>
+				<span class="dot" onclick="go_to_new(3, this)"></span>
+				<span class="dot" onclick="go_to_new(4, this)"></span>
+			</div>	      	
+		</div>
+		<div class="row">
+			<h2 class="models-headline"><span>Models</span></h2>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-718/small/57ad32c8-ca23-11ec-80ef-005056bbdc38;sM;twebp;c892;gc/porsche-small.webp" alt="Porsche 718"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>718</h2>
+						<div>from US $ 97,400</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=718', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/718/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/718/', '_blank');">718</span>
+				</a>
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-911/small/3cf76e8c-6694-11e9-80c4-005056bbdc38;sP;twebp;c1693;gc/porsche-small.webp" alt="Porsche 911"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>911</h2>
+						<div>from US $ 192,400</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=911', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/911/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/911/', '_blank');">911</span>
+				</a>
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-taycan/small/094d1c1c-bab0-11e9-80c4-005056bbdc38;sP;twebp;c1693;gc/porsche-small.webp" alt="Porsche Taycan"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>Taycan</h2>
+						<div>from US $ 125,100*</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=taycan', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/taycan/taycan-models/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/taycan/', '_blank');">Taycan</span>
+				</a>
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-panamera/small/31077aa2-d337-11ea-80cc-005056bbdc38;sP;twebp;c1693;gc/porsche-small.webp" alt="Porsche Panamera"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>Panamera</h2>
+						<div>from US $ 176,800</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=panamera', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/panamera/panamera-models/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>	
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/panamera/', '_blank');">Panamera</span>
+				</a>			
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-macan/small/47db3c6d-e3d7-11eb-80d9-005056bbdc38;sM;twebp;c892;gc/porsche-small.webp" alt="Porsche Macan"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>Macan</h2>
+						<div>from US $ 85,400</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=macan', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/macan/macan-models/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/macan/', '_blank');">Macan</span>
+				</a>
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 models-col">
+				<div class="models-img"><img draggable="false" src="https://files.porsche.com/filestore/image/multimedia/none/carrange-flyout-cayenne/small/2fbf4ab0-ded1-11ed-8101-005056bbdc38;sP;twebp;c1693;gc/porsche-small.webp" alt="Porsche Cayenne"></div>
+				<div class="d-none d-md-block models-info">
+					<div>
+						<h2>Cayenne</h2>
+						<div>from US $ 143,400</div>						
+					</div>
+					<div>
+						<button onclick="window.open('https://www.porsche.com/middle-east/_egypt_/modelstart/all/?modelrange=cayenne', '_blank');" class="models-btn-1"><span>Build Your Own</span></button>
+						<button onclick="window.location.href='https://www.porsche.com/middle-east/_egypt_/models/cayenne/';" class="models-btn-2"><span>All Models</span></button>
+					</div>
+				</div>
+				<a href="#" class="models-info-sm d-md-none">
+					<span onclick="window.open('https://www.porsche.com/middle-east/_egypt_/models/cayenne/', '_blank');">Cayenne</span>
+				</a>
+			</div>
+			<div class="models-notes"><span>* European specifications shown below. Market specific values to be confirmed upon homologation.</span></div>
+		</div>	
+		<div class="row">
+			<h2 class="models-headline"><span>Find a Porsche near you</span></h2>
+			<div class="models-content">
+				<button onclick="choices_move_right()" class="r1 btn-1 d-sm-block" type="button">
+					<span></span>
+		      	</button>
+				<button onclick="choices_move_left()" class="l1 btn-1" type="button">
+					<span></span>
+		      	</button>
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1" id="porsche-choice-1">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal.webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block models-info down-center">
+							<button class="models-btn-3"><span>Find 718 Models</span></button>
+					</div>
+					<a href="#" class="models-info-sm d-sm-block-1 d-md-none">
+						<span>718</span>
+					</a>
+				</div>		
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1 d-none d-sm-flex" id="porsche-choice-2">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (1).webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block models-info down-center">
+							<button class="models-btn-3"><span>Find 911 Models</span></button>
+					</div>
+					<a href="#" class="models-info-sm d-md-none">
+						<span>911</span>
+					</a>
+				</div>		
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1 d-none d-lg-flex d-xl-flex" id="porsche-choice-3">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (2).webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block d-sm-none models-info down-center">
+							<button class="models-btn-3"><span>Find Taycan Models</span></button>
+					</div>
+					<a href="#" class="models-info-sm d-md-none">
+						<span>Taycan</span>
+					</a>
+				</div>						      	
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1" id="porsche-choice-4">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (3).webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block models-info down-center">
+							<button class="models-btn-3"><span>Find Panamera Models</span></button>	
+					</div>
+					<a href="#" class="models-info-sm d-md-none">
+						<span>Panamera</span>
+					</a>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1" id="porsche-choice-5">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (4).webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block models-info down-center">
+							<button class="models-btn-3"><span>Find Macan Models</span></button>
+					</div>
+					<a href="#" class="models-info-sm d-md-none">
+						<span>Macan</span>
+					</a>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 models-col-1" id="porsche-choice-6">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (5).webp" alt="Porsche 718"></div>
+					<div class="d-none d-md-block models-info down-center">
+							<button class="models-btn-3"><span>Find Cayenne Models</span></button>
+					</div>
+					<a href="#" class="models-info-sm d-md-none">
+						<span>Cayenne</span>
+					</a>
+				</div>
+				<div class="switch-jumbotron-1">
+					<span class="dot selected-dot" onclick="pick_a_choice(0, this)"></span>
+					<span class="dot" onclick="pick_a_choice(1, this)"></span>
+					<span class="dot" onclick="pick_a_choice(2, this)"></span>
+					<span class="dot" onclick="pick_a_choice(3, this)"></span>
+					<span class="dot d-lg-block" onclick="pick_a_choice(4, this)"></span>
+					<span class="dot d-sm-block" onclick="pick_a_choice(5, this)"></span>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<h2 class="models-headline"><span>Shopping Tools</span></h2>
+			<div class="models-content con-1">
+				<a href="https://www.porsche.com/middle-east/_egypt_/models/?compare=" class="col-xl-6- col-lg-6 col-md-8 col-sm-8 col-xs-12 models-col-1">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (6).png" alt="Porsche 718"></div>
+					<div class="jumbotron-items-1"><span>Compare</span></div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/contact/" class="col-xl-3- col-lg-3 col-md-4 col-sm-4 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (7).webp" alt="Porsche 718"></div>
+					<div class="jumbotron-items-1"><span>Locate us</span></div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/porscheservice/" class="col-xl-3- col-lg-3 col-md-4 col-sm-4 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img"><img draggable="false" src="images/porsche-normal (8).webp" alt="Porsche 718"></div>
+					<div class="jumbotron-items-1"><span>Porsche Service</span></div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<h2 class="models-headline"><span>Porsche Social</span></h2>
+			<div class="social-content">
+				<div class="social-item social-pos-1"><div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social"></div>
+					<div class="social-footer-lg">
+						<p class="social-details-lg">The latest #911GT3 incorporates more racing</p>
+						<p class="account-name-lg">@porschecentrelebanon</p>					
+					</div>
+				</div>
+				<div class="social-item social-pos-2"><div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@porschecentrelebanon</p>
+						<p class="social-details-sm">Did you know that</p>				
+					</div>
+				</div>
+				<div class="social-item social-pos-3">
+					<div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@porschecentredubai</p>
+						<p class="social-details-sm">Details. Details</p>					
+					</div>
+				</div>
+				<div class="social-item social-pos-4 d-none d-sm-block">
+					<div class="icon-container-2 pin-3 face"></div>
+					<div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@Porsche</p>
+						<p class="social-details-sm">Athletic, Streamlined,</p>					
+					</div>
+				</div>
+				<div class="social-item social-pos-5 d-none d-sm-block">
+					<div class="icon-container-2 pin-3 insta"></div>
+					<video class="social-vid" preload="auto" autoplay loop muted="muted" volume="0"> 
+			        <source src="images/porsche-social-5.mp4" type="video/mp4"> 
+			        </video>
+			        <div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@porschecentre_pta</p>	
+						<p class="social-details-sm">The Macan GTS 🔥</p>			
+					</div>
+				</div>
+				<div class="social-item social-pos-6 d-none d-sm-block">
+					<div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social"></div>
+					<div class="social-footer-lg">
+						<p class="social-details-lg">The interior is designed to perpetually evoke a sense of infinite luxury.</p>
+						<p class="account-name-lg">@porschesaudiarabia</p>					
+					</div>
+				</div>
+				<div class="social-item social-pos-7 d-none d-md-block">
+					<div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social"></div>
+					<div class="social-footer-lg">
+						<p class="social-details-lg">From every angle a traditional athletic form:</p>
+						<p class="account-name-lg">@porschecentredubai</p>					
+					</div>
+				</div>
+				<div class="social-item social-pos-8 d-none d-md-block">
+					<div class="icon-container-2 pin-3 face"></div>
+					<div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@Porsche</p>	
+						<p class="social-details-sm">Plenty of space for</p>				
+					</div>
+				</div>
+				<div class="social-item social-pos-9 d-none d-md-block">
+					<div class="icon-container-2 pin-3 insta"></div>
+					<div class="fade-social-sm"></div>
+					<div class="social-footer-sm">
+						<p class="account-name-sm">@porschecentrelebanon</p>							
+						<p class="social-details-sm">Since its launch in</p>	
+					</div>
+				</div>
+			</div>
+			<div class="social-load-more"><a href="https://www.porsche.com/middle-east/_egypt_/social-media/" class="load-more">Load more</a></div>
+		</div>
+		<div class="row">
+			<h2 class="models-headline"><span>Discover</span></h2>
+			<div class="models-content con-1">
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img">
+						<img draggable="false" src="images/porsche-normal (9).png" width="100%" alt="Porsche 718">
+						<div class="red-line"></div>
+					</div>
+					<div class="jumbotron-items-2"><span>Porsche Center Egypt. How to fond us</span></div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/importers/team/" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img">
+						<img draggable="false" src="images/porsche-normal (10).png" width="100%" alt="Porsche 718">
+						<div class="red-line"></div>
+					</div>
+					<div class="jumbotron-items-2"><span>Porsche Center Egypt. Meet out team</span></div>
+				</a>
+				<a href="https://www.porsche.com/countries/porschefinder-middle-east/?cslang=de" target="_blank" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img">
+						<img draggable="false" src="images/porsche-normal (11).png" width="100%" alt="Porsche 718">
+						<div class="red-line"></div>
+					</div>
+					<div class="jumbotron-items-2 up"><span>Porsche Finder</span></div>
+				</a>
+				<a href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/exclusive-manufaktur/passion/" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12 models-col-1">
+					<div class="models-img">
+						<img draggable="false" src="images/porsche-normal (12).png" width="100%" alt="Porsche 718">
+						<div class="red-line"></div>
+					</div>
+					<div class="jumbotron-items-2"><span>Porsche Exclusive Manufaktur</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<footer class="container-fluid">
+		<div class="row">
+			<hr class="last-hr">
+			<div class="footer">
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 models-col-1" id="footer-content">
+					<p class="bold">Porsche Company</p>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/pressreleases/"><span>Latest News</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/overview/"><span>At a Glance</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/jobs/"><span>Jobs & Careers</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/dialog/contactandinformation/"><span>Contact & Information</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/christophorusmagazine/"><span>Christophorus - The Porsche Magazine</span></a>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 models-col-1" id="footer-content">
+					<p class="bold">Behind the Scene</p>
+					<a href="https://www.porsche.com/middle-east/_egypt_/motorsportandevents/motorsport/"><span>Passion Motorsports</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/motorsportandevents/experience/"><span>Porsche Experience</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/accessoriesandservice/classic/"><span>Porsche Classic</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/porschemuseum/"><span>Visit Porsche Museum</span></a>
+				</div>					
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 models-col-1" id="footer-content">
+					<p class="bold">Online Services</p>
+					<a href="https://www.porsche.com/middle-east/_egypt_/login/"><span>Porsche Login</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/dialog/newsletter/subscribe/"><span>Sign up for News</span></a>
+				</div>				
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 models-col-1" id="footer-content">
+					<p class="bold">Build & Find</p>
+					<a href="https://www.porsche.com/middle-east/_egypt_/modelstart/" target="_blank"><span>Build your Porsche</span></a>
+					<a href="https://www.porsche.com/middle-east/models/?compare="><span>Compare Models</span></a>
+					<a href="https://finder.porsche.com/eg/en-EG/search/list?vehicleFilterType=PREOWNED" target="_blank"><span>Search Pre-Owned</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/dealersearch/"><span>Find your Porsche Centre</span></a>
+					<a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/downloads/"><span>Download the model range catalogue</span></a>
+				</div>				
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 models-col-1" style="margin-bottom: 30px">
+					<div id="open">
+						<div class="share-section"><span></span>Share Page</div>
+						<div class="share-extend">
+							<a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.porsche.com%2Fmiddle-east%2F_egypt_%2F%3Ffbclid%3DIwAR3l7U6ZNdeksn04iU6d6e_tsaw00eE0kxFkQORcG99sHOB4oDgD1OSsZpU" target="_blank" class="icon-container"><img src="images/facebook.jpg" alt="facebook" width="50px" height="50px"></a>
+							<a href="https://twitter.com/intent/tweet?text=http%3A%2F%2Fwww.porsche.com%2Fmiddle-east%2F_egypt_%2F&pc%3D_SOM_WWW_COM-Share-TWT" target="_blank" class="icon-container" data-service="Twitter"><img src="images/twitter.png" alt="twitter" width="50px" height="50px"></a>
+							<a href="https://digg.com/" target="_blank" class="icon-container"><img src="images/digg.jpg" alt="digg" width="50px" height="50px"></a>
+							<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.porsche.com%2Fmiddle-east%2F_egypt_%2F&pc%3D_SOM_WWW_COM-Share-LIN&title=Porsche%20Middle%20East%20-%20Dr.%20Ing.%20h.c.%20F.%20Porsche%20AG" target="_blank" class="icon-container"><img class="linked-in" src="images/linked-in.png" alt="linked in" width="25px" height="25px"></a>
+							<a href="https://www.pinterest.com/pin/create/bookmarklet/?url=http%3A%2F%2Fwww.porsche.com%2Fmiddle-east%2F_egypt_%2F&pc%3D_SOM_WWW_COM-Share-PIN&media=https%3A%2F%2Ffiles.porsche.com%2Ffilestore%2Fimage%2Fmiddle-east%2Fnone%2Fimporters-egypt-xle%2Fnormal%2F252f35dd-6e53-11e4-99aa-001a64c55f5c%2Fporsche-normal.jpg&alt=Porsche%20Middle%20East%20-%20Dr.%20Ing.%20h.c.%20F.%20Porsche%20AG&title=Porsche%20Middle%20East%20-%20Dr.%20Ing.%20h.c.%20F.%20Porsche%20AG&is_video=false&description=Welcome%20to%20Porsche!%20Find%20information%20on%20all%20Porsche%20vehicles%2C%20services%2C%20dealers%20in%20your%20area%20and%20everything%20about%20the%20Porsche%20brand%20right%20here." target="_blank" class="icon-container pin"><img class="pinterest" src="images/pinterest.png" alt="pinterest" width="23px" height="29px"></a>
+						</div>						
+					</div>
+					<p class="connect">Connect with Porsche</p>
+					<div class="share-extend-1">
+						<a href="https://www.facebook.com/porsche/" class="icon-container-1 facebook"></a>
+						<a href="https://www.youtube.com/user/Porsche" class="icon-container-1 youtube"></a>
+						<a href="https://www.pinterest.com/porsche/" class="icon-container-1 pin-1"><img class="pinterest" src="images/pinterest-1.png" alt="pinterest" width="23px" height="29px"></a>
+						<a href="https://www.instagram.com/porsche/" class="icon-container-1 instagram"></a>
+						<a href="https://www.linkedin.com/company/porsche-middle-east-&-africa?trk=top_nav_home" class="icon-container-1 pin-2"><img class="linked-in" src="images/linked-in-1.png" alt="linked in" width="25px" height="25px"></a>
+					</div>	
+				</div>			
+			</div>	
+		</div>
+		<div class="row" style="background-color: #191f22;">
+			<div class="footer d-row">
+				<div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 col-xs-12 models-col-1">
+					<p class="bottom-footer-font">Change country/region:</p>
+					<div style="display:flex; flex-wrap: wrap;">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12" id="footer-button" tabindex="1">
+							<div class="footer-button"><span class="ft-sign">Select a region</span></div>
+							<div class="region-extend"><p onclick="select_a_region(this)" class="region-chioce">North America</p> <p onclick="select_a_region(this)" class="region-chioce">Latin America</p> <p onclick="select_a_region(this)" class="region-chioce">Europe</p> <p onclick="select_a_region(this)" class="region-chioce">Middle East</p> <p onclick="select_a_region(this)" class="region-chioce">Africa</p> <p onclick="select_a_region(this)" class="region-chioce">Asia</p> <p onclick="select_a_region(this)" class="region-chioce">Australia/Oceania</p></div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 unclickable-button" id="footer-button" tabindex="1">
+							<div class="footer-button" onclick="go_to_top(document.querySelectorAll('.region-extend')[1])"><span class="ft-sign">Select a country/region</span></div>
+							<div class="region-extend region-extend-1"></div>
+						</div>
+					</div>
+				</div>
+				<hr class="hr">
+				<p class="last-p">© 2023 Porsche Centre Egypt - SMG ENGINEERING AUTOMOTIVE CO. - Egypt. <a href="https://www.porsche.com/middle-east/_egypt_/legal-notice/"><span>Legal notice</span></a>. <a href="https://www.porsche.com/middle-east/_egypt_/privacy-policy/"><span>Privacy Policy</span></a>. <a href="https://www.porsche.com/licenses" target="_blank"><span>Open Source Software Notice</span></a>. <a href="https://www.porsche.com/middle-east/_egypt_/aboutporsche/overview/compliance/whistleblower-system/"><span>Whistleblower System</span></a>. Business and Human Rights. </p>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+	<script src="js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

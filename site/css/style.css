@@ -1,0 +1,1429 @@
+/*some global edit*/
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 200%;
+	color: black;
+	background-color: white;
+	font-family: 'Cairo', 'Noto Sans', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+/*The start of header selectors*/
+nav > .container{
+	max-width: 3000px;
+	width: 90%;
+}
+#header-nav{
+	background-color: white;
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: grey;
+}
+#logo-img{
+	background: url("../images/Porsche_Logo.png") no-repeat;
+	width: 200px;
+	height: 140px;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: grey;
+	border-radius: 0 0 5px 5px;
+	overflow: visible;
+	margin: var(margin)+1;
+	position: relative;
+	z-index: 2;
+}
+.navbar-brand{
+	margin-bottom: -30px;
+	padding-top: 0;
+	margin-top: -8px;
+	padding: 0;
+}
+button.navbar-toggler, button.navbar-toggler:focus, button.navbar-toggler:active{
+	border:0px;
+	box-shadow: 0 0 0 0;
+}
+button.navbar-toggler:hover{
+	color: red;
+}
+.bi-person, .bi-person-fill{
+	margin-bottom: 4px;
+}
+button:hover .navbar-toggler-icon{
+	filter: invert(30%) sepia(95%) saturate(6578%) hue-rotate(354deg) brightness(115%) contrast(134%);
+}
+button .bi-person{
+	display: inline;
+}
+button .bi-person-fill, button:hover .bi-person-fill{
+	display: none;
+}
+button:active .bi-person{
+	display: none;
+}
+button:active .bi-person-fill{
+	display: inline;
+}
+.bi{
+	margin: auto 0px auto 0px;
+}
+.navbar-right{
+	float: right;
+}
+.vertical-hr{
+	width: 1px;
+	height: 40px;
+	background-color: black;
+	margin: auto 30px auto 30px;
+	opacity: 1;
+}
+.navbar-toggler.focus{
+	background-color: red;
+}
+.white{
+	background-color: #f2f1f5;
+}
+.black-font{
+	color: black !important;
+}
+.row{
+	height: 100%;
+}
+.btn-close {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  opacity: 1;
+  position: absolute;
+  top: 50px;
+  left: -80px;
+  background: transparent var(--bs-btn-close-bg) center/.5em auto no-repeat;
+}
+.models-btn-close {
+    position: relative;
+    left: 30px; 
+    background: transparent none center/.5em auto no-repeat;
+    font-size: 60%;
+    border: 0px solid black;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+#small-close-btn {
+	width: 10px;
+	height: 10px;
+	border: none;
+	opacity: 1;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background: transparent url(../images/chevron-left.svg) center/.5em auto no-repeat;
+	background-size: 25px 25px;
+	padding: 20px;
+	display: none;
+}
+#main-menu{
+	display: block;
+}
+#cars-menu{
+	display: none;
+}
+#offcanvas-body-1, #offcanvas-body-2, #offcanvas-body-3, #offcanvas-body-4, #offcanvas-body-5{
+	display: none;
+}
+.btn-close:focus{
+  box-shadow: 0 0 0 0;
+}
+.models-btn-close:hover{
+	background-color: var(--bs-gray-300);
+}
+.offcanvas-header .btn-close {
+  padding: 20px 20px 20px 20px;
+}
+#offcanvasNavbarLabel{
+	margin-bottom: 50px;
+}
+.scroll{
+	overflow: scroll;
+}
+.nav-item{
+	position: relative;	
+	margin-left: 20px;
+	margin-bottom: 40px;
+	font-size: 80%;
+	padding-left: 10px;
+	min-width: 200px;
+}
+.nav-item img{
+	mix-blend-mode: multiply;
+}
+.nav-link-1{
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+}
+.nav-link-2{
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+  line-height: normal;
+  max-width: 283.8px;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.nav-link-2 img{
+  width: 83%;
+}
+.nav-item phn-p-icon.flip svg{
+  transform: rotateY(180deg);
+  margin-right: 10px;
+}
+.menu-img{
+	max-width: 250px; 
+	min-width: 100px; 
+	width: 50%;
+}
+#menuInfoItems.nav-item{
+	font-size: 60%;
+	margin-bottom: 10px;
+}
+#dealer{
+	margin-left: 0;
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+.small-or{
+	font-size: 65%;
+}
+.nav-item:hover span{
+	background-color: lightgrey;
+	border-radius: 5px;
+	padding: 0 5px 0 5px;
+}
+.nav-item:hover span.nav-link-2{
+	padding: 0 0 5px 0;
+}
+.nav-item:hover span.nav-link-2 div{
+	transform: scale(1.1);
+}
+.menuInfoItems1.nav-item:hover span{
+	background-color: lightgrey;
+	border-radius: 5px;
+	padding: 0;
+}
+.selected{
+	background-color: lightgrey;
+	border-radius: 5px;
+}
+.selected-dot{
+	background-color: var(--bs-red) !important;
+}
+#menuItems.nav-item:hover, #menuItems.nav-item:focus{
+	background-color: lightgrey;
+	border-radius: 5px;
+}
+button.nav-link{
+	width: 100%;
+	text-align: left;
+}
+button.nav-link pre{
+	font-size: 1rem;
+	color: black;
+}
+.bi-chevron-right, .bi-chevron-left{
+	vertical-align: middle;
+	float: right;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 10px;
+	margin: auto auto auto 10px;
+	text-align: center;
+	white-space: nowrap;
+}
+d-flex{
+	flex-direction:row;
+	position: relative;
+}
+input.form-control, button.form-control{
+	min-height: 50px;
+  flex-grow:2;
+  border-radius: 4px;
+  margin-right: 0;
+  border: 2px solid darkgrey;
+  padding: 6px 80px 6px 12px;
+}
+button.form-control, button.form-control:focus {
+	text-align: center;
+	padding: 6px;
+	border: 2px solid black;
+	background-color: transparent;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+button.form-control:hover{
+	background-color: lightgrey;
+	box-shadow: 0 0 0 0;
+}
+input.form-control:focus{
+    outline: none;
+    border: 2px solid black;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+button.btn {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	buttom:10px;
+	right: 10px;
+	border:0px solid black;
+	color:white;
+	border-radius: 2px;
+	padding: 0;
+}
+button.btn-1 {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	border:0px solid black;
+	color:white;
+	border-radius: 2px;
+	padding: 0;
+	box-shadow: 0px 0px 5px 0px grey;
+	background-color: white;
+	z-index: 1;
+}
+.r1{
+	top: 50%;
+	right: 3rem;	
+}
+.l1{
+	top: 50%;
+	left: 3rem;	
+}
+.btn-1 span{
+	display: flex;
+	width: 3rem;
+	height: 3rem;
+	align-items: center;
+	justify-content: center;
+}
+.btn-1:hover {
+	background-color: var(--bs-red);
+	box-shadow: 0px 0px 0px 0px;
+}
+.btn-1:hover span{
+	content: "";
+	filter: invert(100%) sepia(27%) saturate(0%) hue-rotate(354deg) brightness(105%) contrast(101%);
+}
+.btn-1.r1 span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: -1px;
+	filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(105%);
+}
+.btn-1.l1 span::before{
+	content: "";
+	background: url("../images/chevron-left.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: -1px;
+	filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(105%);
+}
+#news-2, #news-3, #news-4, #news-5{
+	display: none;
+}
+#porsche-choice-4, #porsche-choice-5, #porsche-choice-6{
+	display: none;
+}
+.models-btn-close::before{
+	content: "";
+	background: url("../images/chevron-left.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0px 10px -3px 0px;
+	filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(105%);	
+}
+button.btn:hover {
+	background-color: lightgrey;
+}
+button.btn svg{
+	filter: invert(77%) sepia(100%) saturate(0%) hue-rotate(260deg) brightness(109%) contrast(102%);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-control::-webkit-search-cancel-button{
+	-webkit-appearance: none;
+	background: url("../images/clear-svgrepo-com.svg") no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	position: absolute;
+	border: none;
+	width: 30px;
+	height: 30px;
+	display: block;
+	right: 80px;
+	border-radius: 2px; 
+	margin: 0 -40px 0 0;      
+}
+.form-control::-webkit-search-cancel-button:hover{
+	background-color: lightgrey;
+}
+.form-control:not(:checked)::-webkit-search-cancel-button{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.loc-img{
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+}
+.loc-img-1{
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+}
+#menuInfo{
+	padding-top: 75px;
+}
+/*The end of header selectors*/
+
+/*The start of main content selectors*/
+.jumbotron{
+	padding: 0px;
+}
+.jumbotron-items{
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	padding-left: 40px;
+}
+.jumbotron-items:hover{
+	color: var(--bs-red) !important;
+}
+.not-100{
+	height: auto;
+}
+.jumbotron-items-1{
+	font-size: 1.5rem;
+	color: white;
+	position: absolute;
+	bottom: 5%;
+	padding-left: 20px;
+}
+a:hover .jumbotron-items-1{
+	color: var(--bs-red);
+}
+.jumbotron-items-2{
+	font-weight: normal;
+	font-size: 1rem;
+	color: black;
+	position: relative;
+}
+a:hover .jumbotron-items-2{
+	color: var(--bs-red);
+}
+.red-line{
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: 0px;
+	background-color: transparent;
+}
+a:hover .red-line{
+	background-color: var(--bs-red);
+}
+.jumbotron-items h1{
+	font-weight: 700;
+	font-size: 2.75rem;
+	margin-bottom: 0;
+}
+.jumbotron-items svg{
+	filter: invert(31%) sepia(98%) saturate(1458%) hue-rotate(331deg) brightness(86%) contrast(101%);
+}
+.jumbotron-items p{
+	font-size: 100%;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+a.row{
+/*	margin: 0;*/
+	padding: 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.row:hover > .btn{
+	display: flex;
+}
+h1 > .bi-chevron-right{
+	float: left;
+	position: relative;
+	top: 24px;
+	margin: auto -20px auto 10px;
+}
+#main-content>.row{
+	position: relative;
+}
+.row > .btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 0;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	display: none;
+	z-index: 1;
+}
+.row > .btn svg.bi-chevron-right{
+	margin-right: 5px;
+	filter: invert(0%) sepia(94%) saturate(11%) hue-rotate(226deg) brightness(99%) contrast(101%);
+}
+.row > .btn svg.bi-chevron-left{
+	margin-right: 5px;
+	filter: invert(77%) sepia(100%) saturate(0%) hue-rotate(260deg) brightness(109%) contrast(102%);
+}
+.row > .btn:hover{
+	background-color: var(--bs-red);
+}
+button.r{
+	top: 45%;
+	right: 10px;
+}
+button.l{
+	top: 45%;
+	left: 10px;
+}
+.switch-jumbotron{
+	padding: 10px 0px 20px 0px;
+	height: 9px;
+	text-align: center;
+	position: relative;
+	bottom: 64px;
+}
+.switch-jumbotron-1{
+  padding: 10px 10px 20px 10px;
+  height: 9px;
+  width: 100%;
+  text-align: center;
+}
+.dot{
+	vertical-align: middle;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #e2e3e5;
+	border-radius: 50%;
+	margin: 0px 5px 5px 5px;
+	position: relative;
+	z-index: 1;
+}
+.dot:hover{
+	background-color: var(--bs-red);
+}
+
+.models-headline{
+	font-size: 2.5rem;
+	font-weight: 700;
+	padding-right: 1.5rem;
+	margin: 5px auto 20px auto;
+	width: 95%;
+}
+.models-content{
+	display: flex;
+	font-size: 3rem;
+	font-weight: 700;
+	margin: 5px auto 20px auto;
+	width: 80%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+.con-1{
+	width: 95%;
+}
+.social-content{
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 8px;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 5px auto 20px auto;
+	width: 95%;
+	aspect-ratio: 2 / .95;
+}
+.social-item{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(221, 221, 221,0.8)), to(rgba(255, 255, 255,0.2)), color-stop(.5,#fff));
+/*	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+	-webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+	mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+	mask-image: linear-gradient(to bottom, black 0%, transparent 100%);*/
+}
+.fade-social{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(67 67 67)), to(rgb(255 255 255 / 0%)), color-stop(.5,#00000087))!important;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+.fade-social-sm{
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.social-footer-sm{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
+}
+.social-footer-lg{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
+}
+.social-details-lg{
+	position: relative;
+	font-weight: lighter;
+	color: white;
+	font-size: 60%;
+	margin: 0 .5rem .3rem 1rem;
+	z-index: 1;
+}
+.account-name-lg{
+	position: relative;
+	font-weight: bold;
+	color: white;
+	font-size: 55%;
+	margin: 0 .5rem 1rem 1rem;
+	z-index: 1;
+	word-wrap: break-word;
+}
+.social-details-sm{
+	position: relative;
+	font-weight: lighter;
+	color: white;
+	font-size: 60%;
+	margin: 0 .5rem .3rem 1rem;
+	z-index: 1;
+}
+.account-name-sm{
+	position: relative;
+	font-weight: bold;
+	color: white;
+	font-size: 55%;
+	margin: 1rem .5rem .3rem 1rem;
+	z-index: 1;
+	word-wrap: break-word;
+}
+.social-load-more{
+	width: 95%;
+	margin: 5px auto 20px auto;
+}
+.load-more{
+	background-color: var(--bs-gray-800);
+	color: white;
+	width: fit-content;
+	float: right;
+	font-size: 60%;
+	padding: 10px 20px;
+}
+.models-notes{
+	font-size: 45%;
+	font-weight: 400;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	margin: 15px auto 20px auto;
+	width: 95%;
+}
+.models-col{
+	padding: 0;
+	position: relative;
+	display: flex;
+}
+.models-col-1{
+	padding: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+}
+.models-info{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 10px 20px 30px 25px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.down-center{
+	position: relative;
+	flex-direction: column;
+/*	*/
+	align-items:center;
+	padding-bottom: 0px;
+}
+.models-info-sm{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 10px 20px 30px 25px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;	
+	font-size: 1.5rem;
+}
+.models-info-sm:hover{color: var(--bs-red);}
+.models-info-sm span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: -1px;
+	filter: invert(28%) sepia(80%) saturate(1807%) hue-rotate(331deg) brightness(89%) contrast(95%);
+}
+.models-info h2{
+	font-weight: 700;
+	font-size: 1.2em;
+	margin: 0px;
+}
+.models-info div div{
+	font-size: .75em;
+	font-weight: 400;
+}
+.models-info button{
+	font-size: .55em;
+  height: 55px;
+}
+/*.models-img{
+	margin: 0px -12px 0px -12px;
+}*/
+.models-img img {
+	max-width: 100%;
+}
+.models-img {
+	display: block;
+	position: relative;
+}
+button.models-btn-1{
+	background-color: white;
+	border: none;
+	padding: 10px 15px 10px 15px;
+}
+button.models-btn-2{
+	background-color: transparent;
+	border: 1px solid white;
+	padding: 10px 15px 10px 15px;
+	color: white;
+}
+button.models-btn-3{
+	height: 3.5rem;
+	font-size: 40%;
+	color: white;
+	background-color: var(--bs-gray-700);
+	border: none;
+	padding: 0px 15px 0px 15px;
+}
+button.models-btn-1:hover{
+	background-color: var(--bs-red);
+	color: white;
+}
+button.models-btn-2:hover{
+	border-color: var(--bs-red);
+	color : var(--bs-red);
+}
+button.models-btn-3:hover{
+	background-color: var(--bs-red);
+	color : var(--bs-white);
+}
+button.models-btn-1:hover span::before{
+	filter: invert(96%) sepia(0%) saturate(17%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+button.models-btn-2:hover span::before{
+	filter: invert(28%) sepia(80%) saturate(1807%) hue-rotate(331deg) brightness(89%) contrast(95%);
+}
+button.models-btn-1 span::before{
+	content: "";
+	background: url("../images/box-arrow-up-right.svg") no-repeat;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+button.models-btn-2 span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 7px;
+	margin-bottom: -1px;
+	filter: invert(96%) sepia(0%) saturate(17%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+button.models-btn-3 span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 7px;
+	margin-bottom: -1px;
+	filter: invert(96%) sepia(0%) saturate(17%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+.jumbotron-items-1 span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: -1px;
+	filter: invert(58%) sepia(94%) saturate(6353%) hue-rotate(335deg) brightness(89%) contrast(93%);
+}
+.jumbotron-items-2 span::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 15px 15px;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-bottom: -1px;
+	filter: invert(58%) sepia(94%) saturate(6353%) hue-rotate(335deg) brightness(89%) contrast(93%);
+}
+.up span::before{
+	content: "";
+	background: url("../images/box-arrow-up-right.svg") no-repeat;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+.footer{
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 5px auto 0px auto;
+  width: 95%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+div.d-row{
+	flex-direction: row;
+}
+.bottom-footer-font{
+	color: white;
+	font-weight: bold;
+	font-size: 1.6rem;
+	padding: 15px 0;
+	margin-bottom: 0rem;
+}
+.footer-button{
+	background-color: var(--bs-gray-800);
+	color: white;
+	padding: 10px 0px 10px 10px;
+	margin: .5rem 1rem 0rem 0rem;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+}
+.unclickable-button{
+	pointer-events: none;
+}
+.unclickable-button div.footer-button{
+	color: grey;
+}
+.unclickable-button div::after{
+	filter: invert(59%) sepia(0%) saturate(1364%) hue-rotate(176deg) brightness(85%) contrast(85%);
+}
+#footer-button{
+	margin-bottom: 2rem;
+}
+#footer-button:active .region-extend, #footer-button:focus .region-extend{
+	display: block;
+}
+#footer-button:active .footer-button::after, #footer-button:focus .footer-button::after{
+	transform: rotate(90deg);
+}
+/*#footer-button:not(:focus) .region-extend{
+	display: none;
+}*/
+.bold{
+	font-weight: 700;
+}
+.last-hr{
+	width: 93%;
+  margin: 10px auto;
+}
+#footer-content a{
+	margin-bottom: 16px;
+	color: black;
+}
+#footer-content a:hover{
+	color: var(--bs-red);
+}
+#footer-content a:focus span{
+	border: 2px solid var(--bs-teal);
+	display: block;
+	width: fit-content;	
+}
+#footer-content a:not(:focus) span{
+	border: 2px solid transparent;
+	display: block;
+	width: fit-content;
+}
+.last-p a:focus span{
+	border: 2px solid var(--bs-teal);
+}
+.last-p a:not(:focus) span{
+	border: 2px solid transparent;
+}
+.share-section{
+	margin-top: 20px;
+	background-color: var(--bs-gray-700);
+	color: white;
+	padding: 10px 30px 10px 20px;
+}
+.share-extend{
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	background-color: var(--bs-gray-100);
+	padding: 10px 10px 15px 10px;
+	border: 1px solid grey;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	display: none;
+}
+.share-extend-1{
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	display: flex;
+	margin-left: -5px;
+}
+.region-extend{
+	display: none;
+	position: absolute;
+	top: -123px;
+	height: 200px;
+	background-color: var(--bs-gray-100);
+	width: calc(50% - 1rem);
+	box-shadow: 0px 0px 9px 0px;
+	overflow: overlay;
+	padding: 20px 0px 3px 10px;
+}
+.icon-container{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-color: #0274b3;
+}
+.icon-container-1{
+	width: 50px;
+	height: 50px;
+	margin: 0px 5px 10px 5px;
+}
+.icon-container-2{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.insta{
+	background:#fff url("../images/instagram-1.png") no-repeat center center;
+	background-size: 30px;
+}
+.face{
+	background:#fff url("../images/facebook-1.jpg") no-repeat center center;
+	background-size: 30px;
+}
+.region-chioce{
+	font-size: 1.2rem;
+}
+.first{
+	margin-left: 0px;
+}
+.last{
+	margin-right: 0px;
+}
+.icon-container:hover{
+	opacity: .6;
+}
+.linked-in{
+	position: relative;
+	margin: 12.6px;
+}
+.pinterest{
+	position: relative;
+	margin: 10.6px 13.7px;
+}
+.pin{
+	background-color: #ce1f27;
+}
+.pin-1{
+	background-color: #313639;
+}
+.pin-2{
+	background-color: #313639;
+}
+.pin-3{
+	background-color: #313639;
+}
+.hr{
+	width: 100%;
+	color: white;
+}
+.last-p{
+	color: white;
+	font-size: 1rem;
+	margin-bottom: 5rem;
+}
+.last-p a{
+	text-decoration-line:underline;
+	color: white;
+}
+.last-p a:hover{
+	text-decoration-line:none;
+	color: #ba3440;
+}
+.connect{
+	margin-top: 40px;
+	margin-bottom: 5px;
+	font-size: 120%;
+	font-weight: bold;
+	color: var(--bs-gray-500);
+}
+.region-chioce:hover{
+	color: var(--bs-red);
+}
+.pin-2:hover{
+	background-color: #0274b3;
+}
+.pin-1:hover{
+	background-color: #CD242B;
+}
+.pin-1:hover img{
+	content: url("../images/pinterest.png");
+}
+.pin-2:hover img{
+	content: url("../images/linked-in.png");
+}
+.facebook{
+	background-image: url("../images/facebook-1.jpg");
+	background-size: 50px 50px;
+}
+.youtube{
+	background-image: url("../images/youtube-1.png");
+	background-size: 50px 50px;
+}
+.instagram{
+	background-image: url("../images/instagram-1.png");
+	background-size: 50px 50px;
+}
+.instagram:hover{
+	background-image: url("../images/instagram.png");
+}
+.youtube:hover{
+	background-image: url("../images/youtube.png");
+}
+.facebook:hover{
+	background-image: url("../images/facebook.jpg");
+}
+.ft-sign{
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+}
+.social-pos-1{
+	grid-area: 1/1/3/3;
+	background-image: url("../images/porsche-social-1.webp");
+}
+.social-pos-2{
+	grid-area: 3/1/4/2;
+	background-image: url("../images/porsche-social-2.webp");
+}
+.social-pos-3{
+	grid-area: 3/2/4/3;
+	background-image: url("../images/porsche-social-3.webp");
+}
+.social-pos-4{
+	grid-area: 1/3/2/4;
+	background-image: url("../images/porsche-social-4.webp");
+	background-position: 0px 50%;
+}
+.social-pos-5{
+	grid-area: 1/4/2/5;
+/*	background-image: url("../images/porsche-social-5.jpg");*/
+}
+.social-pos-6{
+	grid-area: 2/3/4/5;
+	background-image: url("../images/porsche-social-6.webp");
+}
+.social-pos-7{
+	grid-area: 1/5/3/7;
+	background-image: url("../images/porsche-social-7.webp");
+}
+.social-pos-8{
+	grid-area: 3/5/4/6;
+	background-image: url("../images/porsche-social-8.webp");
+	background-position: 50% 30%;
+}
+.social-pos-9{
+	grid-area: 3/6/4/7;
+	background-image: url("../images/porsche-social-9.webp");
+}
+.social-vid{
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  right: -50%;
+  top: -50%;
+}
+#open:hover .share-extend{
+	display: flex;
+}
+.share-section:hover {
+	background-color: var(--bs-red);
+}
+.social-item:hover .fade-social{
+	display: block;
+}
+.social-item:hover .fade-social-sm{
+	opacity: .5;
+}
+.social-item:hover .social-footer-sm{
+	display: block;
+}
+.social-item:hover .social-footer-lg{
+	display: block;
+}
+.load-more:hover{
+	background-color: var(--bs-red);
+}
+.social-sm{
+	backdrop-filter: brightness(50%);
+}
+.share-section span::before{
+	content: "";
+	background: url("../images/share-icon.svg") no-repeat;
+	background-size: 25px 25px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin: 0px 10px auto 0px;
+	filter: invert(0%) sepia(100%) saturate(7427%) hue-rotate(31deg) brightness(87%) contrast(117%);
+}
+.load-more::before{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0px 5px -3px -5px;
+	filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
+}
+.footer-button::after{
+	content: "";
+	background: url("../images/chevron-right.svg") no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 14px;
+  transform: rotate(-90deg);
+	filter: invert(96%) sepia(100%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+}
+/*The end of main content selectors*/
+
+@media (max-width: 991px){
+	#logo-img{
+	background: url("../images/Porsche_Logo-small.png") no-repeat;
+	width: 150px;
+	height: 105px;
+	border-radius: 0 0 5px 5px;
+	overflow: visible;
+	}
+	.navbar-brand{
+	margin-bottom: -30px;
+	padding-top: 0;
+	margin-top: -8px;
+	}
+}
+@media (min-width: 576px){
+	.d-sm-block {
+	    display: inline;
+	}	
+	.d-sm-block-1{
+		display: flex;
+		position: absolute;
+		top: 0px;
+	}
+}
+@media (max-width: 398px){
+	#nav-list{
+		margin-top: 40px;
+	}
+	button.btn-1{
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+	.btn-1 span{
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+	.l1{
+		left: 1.5rem;
+	}
+	.r1{
+		right: 1.5rem;
+	}
+}
+@media (max-width: 161px){
+	.vertical-hr{
+		margin: auto 10px auto 10px;
+	}
+}
+@media (max-width:767px){
+	.btn-close {
+		width: 10px;
+		height: 10px;
+		border: 2px solid white;
+		opacity: 1;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		background: transparent var(--bs-btn-close-bg) center/.5em auto no-repeat;
+	}
+	.btn-close:hover {
+		background-color: lightgrey;
+	}	
+	#small-close-btn{
+		display: block;
+	}
+	#small-close-btn:hover {
+		background-color: lightgrey;
+	}
+}
+
+@media (min-width: 1700px){
+	.offcanvas{
+		--bs-offcanvas-width: 1250px;
+	}
+}
+@media (min-width: 1500px) and (max-width:1699px){
+	.offcanvas{
+		--bs-offcanvas-width: 1000px;
+	}
+}
+@media (min-width: 1200px) and (max-width:1499px){
+	.offcanvas{
+		--bs-offcanvas-width: 950px;
+	}
+}
+@media (min-width: 900px) and (max-width:1199px){
+	.offcanvas{
+		--bs-offcanvas-width: 800px;
+	}
+}
+@media (min-width: 767px) and (max-width:899px){
+	.offcanvas{
+		--bs-offcanvas-width: 700px;
+	}
+}
+@media (max-width: 767px){
+	.offcanvas{
+		--bs-offcanvas-width: 100%;
+	}
+}
+
+@media (max-width:301px){
+	.bi-chevron-right, .bi-chevron-left{
+		vertical-align: middle;
+		float: right;
+		position: relative;
+		margin: 20px auto auto 10px;
+		display: flex;
+	}
+	.icon-container-2{
+		width: 30px;
+		height: 30px;
+	}
+	.insta{
+		background-size: 18px;
+	}
+	.face{
+		background-size: 18px;
+	}
+}
+
+@media (min-width: 768px) and (max-width:992px){
+	button.r{
+		top: 35%;
+		right: 10px;
+	}
+	button.l{
+		top: 35%;
+		left: 10px;
+	}
+	.row > .btn {
+		width: 40px;
+		height: 40px;
+	}
+	.row > .btn svg.bi-chevron-right{
+	margin-right: 0px;
+	}
+	.row > .btn svg.bi-chevron-left{
+		margin-right: 0px;
+	}
+}
+@media (min-width:351px) and (max-width:767px){
+	.row > .btn, .row:hover > button.l, .row:hover > button.r{
+		display: none;
+	}
+	.jumbotron-items h1{
+		font-size: 90%;
+	}
+}
+@media (max-width:350px){
+	.jumbotron-items h1{
+		font-size: 70%;
+	}
+	.row > .btn, .row:hover > button.l, .row:hover > button.r{
+		display: none;
+	}
+	.col-xxs-12{
+		flex:0 0 auto;
+		width: 100% !important;
+	}
+}
+@media (max-width: 575px) {
+	.jumbotron{
+		width: 200vw;
+    left: -50%;
+    position: relative;
+    max-width: unset;
+	}
+	.jumbotron-items p{
+		font-size: 70%;
+		line-height: 20px;
+	}
+	.jumbotron-items{
+		padding-left: 10px;
+	}	
+	.jumbotron-items-1{
+		font-size: 1rem;
+	}
+	.col-xs-12{
+    flex: 0 0 auto;
+    width: 100%;
+  }
+	.col-xs-6{
+		flex: 0 0 auto;
+		width: 50%;
+	} 	
+	.models-headline{
+		font-size: 1.5rem;
+	}
+	.region-extend{
+		width: calc(100% - 1rem);
+	}
+	.models-content{
+		font-size: 2rem;
+	}
+	.region-extend-1{
+		top: -35px;
+	}
+}
+@media (min-width:768px){
+	.models-info{
+		display: flex !important;
+	}
+}
+@media (min-width:1388px){
+	.col-xl-3-{
+		flex:0 0 auto;
+		width: auto;
+	}
+	.col-xl-6-{
+		flex:0 0 auto;
+		width: auto;
+	}
+}
+@media (max-width: 767px) {
+	.social-content{
+		grid-template-rows: repeat(3, 1fr) !important;
+		grid-template-columns: repeat(4, 1fr) !important;
+		aspect-ratio: 4/2.85;
+	}
+	.social-pos-1{
+		grid-area: 1/1/3/3;
+	}
+	.social-pos-2{
+		grid-area: 3/1/4/2;
+	}
+	.social-pos-3{
+		grid-area: 3/2/4/3;
+	}
+	.social-pos-4{
+		grid-area: 1/3/2/4;
+	}
+	.social-pos-5{
+		grid-area: 1/4/2/5;
+	}
+	.social-pos-6{
+		grid-area: 2/3/4/5;
+	}
+}
+@media (max-width: 575px) {
+	.social-content{
+		grid-template-rows: repeat(3, 1fr) !important;
+		grid-template-columns: repeat(2, 1fr) !important;
+		aspect-ratio: 2/2.8;
+	}
+	.social-pos-1{
+		grid-area: 1/1/3/3;
+	}
+	.social-pos-2{
+		grid-area: 3/1/4/2;
+	}
+	.social-pos-3{
+		grid-area: 3/2/4/3;
+	}
+}
