@@ -1373,6 +1373,9 @@ div.d-row{
 	.region-extend-1{
 		top: -35px;
 	}
+	.models-info-sm-1{
+		color: black;
+	}
 }
 @media (min-width:768px){
 	.models-info{
